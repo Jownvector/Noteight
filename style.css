@@ -1,0 +1,21 @@
+body{
+    font-family: 'Segoe UI';
+}
+
+.titulo-nota{
+    padding: 5px;
+}
+
+button{
+    background: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 2px;
+}
+
+button:hover{
+    background: #e7e7e7;
+    border-radius: 3px;
+    padding: 2px;
+}
