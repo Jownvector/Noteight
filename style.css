@@ -1,21 +1,65 @@
 body{
-    font-family: 'Segoe UI';
+    font-family: 'Segoe UI'; /*aplicação de uma fonte global*/
 }
 
-.titulo-nota{
-    padding: 5px;
+.menu-suspenso{
+    position: relative;
+    /*Permite que os elementos filhos
+    do container principal sejam posicionados
+    em relação a ele*/
+    display: inline-block;
+    /*Faz o container se comportar como um bloco
+    mas permanecendo na mesma linha com os outros
+    elementos*/
 }
 
-button{
+.opc-1-suspenso{
+    /*Organização estética do botão*/
     background: none;
     border: none;
     cursor: pointer;
-    border-radius: 3px;
     padding: 2px;
 }
 
-button:hover{
-    background: #e7e7e7;
-    border-radius: 3px;
+.conteudo-opc-1-suspenso{
+    display: none;
+    /*Esconde o menu*/
+    position: absolute;
+    /*permite se posicionar fora do padrão
+    sobre outros elementos*/
+    background-color: #ffffff;
+    min-width: 90px;
+    /*Largura minima de cada item do menu*/
+    z-index: 1;
+    /*Posiciona-o acima dos outros elementos*/
+    a{
+        /*Organização estética do link*/
+        color: black;
+        padding: 8px;
+        text-decoration: none;
+        display: block;
+        font-size: 12px;
+        background-color: #ffffff;
+        transition: 0.5s;
+        border-left:3px solid #ffffff;
+    }
+}
+
+.menu-suspenso:hover .opc-1-suspenso{
+    color: #0d7fdd;
     padding: 2px;
+    /*Altera o fundo do botão quando o
+    mouse passa sobre o menu*/
+}
+
+.menu-suspenso:hover .conteudo-opc-1-suspenso{
+    display: block;
+    /*O conteúdo oculto do menu é exibido*/
+}
+
+.conteudo-opc-1-suspenso a:hover {
+    background-color: #eeeeee;
+    transition: 0.5s;
+    border-left:3px solid #0d7fdd;
+    /*Organização estética do link do menu*/
 }
