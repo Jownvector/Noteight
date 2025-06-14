@@ -1,65 +1,106 @@
 body{
-    font-family: 'Segoe UI'; /*aplicação de uma fonte global*/
+    font-family: 'Segoe UI';  /*aplicação de uma fonte global*/
 }
 
-.menu-suspenso{
-    position: relative;
-    /*Permite que os elementos filhos
-    do container principal sejam posicionados
-    em relação a ele*/
-    display: inline-block;
-    /*Faz o container se comportar como um bloco
-    mas permanecendo na mesma linha com os outros
-    elementos*/
+/*-----Menu arquivo-----*/
+
+.guia-menu
+{
+    display: inline-block;    /*Faz o container se comportar como um bloco, mas permanecendo na mesma linha com os outros elementos*/
+    position: relative;       /*Permite que os elementos filhos do container principal sejam posicionados em relação a ele*/
 }
 
-.opc-1-suspenso{
-    /*Organização estética do botão*/
+.menu-arquivo
+{/*Organização estética do botão*/
     background: none;
     border: none;
     cursor: pointer;
-    padding: 2px;
+    padding: 5px;
 }
 
-.conteudo-opc-1-suspenso{
-    display: none;
-    /*Esconde o menu*/
-    position: absolute;
-    /*permite se posicionar fora do padrão
-    sobre outros elementos*/
-    background-color: #ffffff;
-    min-width: 90px;
-    /*Largura minima de cada item do menu*/
-    z-index: 1;
-    /*Posiciona-o acima dos outros elementos*/
-    a{
-        /*Organização estética do link*/
-        color: black;
-        padding: 8px;
-        text-decoration: none;
+.item-menu-arquivo
+{
+    display: none;            /*Esconde o menu*/
+    position: absolute;       /*permite se posicionar fora do padrão sobre outros elementos*/
+    background-color: #fff;
+    min-width: 100px;          /*Largura minima de cada item do menu*/
+    z-index: 1;               /*Posiciona-o acima dos outros elementos*/
+    .nova-nota
+    {/*Organização estética do link*/
         display: block;
-        font-size: 12px;
-        background-color: #ffffff;
+        padding: 5px;
+        font-size: 11px;
+        color: black;
+        background-color: #fff;
+        text-decoration: none;
         transition: 0.5s;
-        border-left:3px solid #ffffff;
     }
 }
 
-.menu-suspenso:hover .opc-1-suspenso{
-    color: #0d7fdd;
+.guia-menu:hover .item-menu-arquivo
+{/*Altera o fundo do botão quando o mouse passa sobre o menu*/
+    color: #000;
     padding: 2px;
-    /*Altera o fundo do botão quando o
-    mouse passa sobre o menu*/
+    background-color: #e7e7e7;
+    cursor: pointer;
 }
 
-.menu-suspenso:hover .conteudo-opc-1-suspenso{
+.guia-menu:hover .item-menu-arquivo
+{/*O conteúdo oculto do menu é exibido*/
     display: block;
-    /*O conteúdo oculto do menu é exibido*/
 }
 
-.conteudo-opc-1-suspenso a:hover {
-    background-color: #eeeeee;
+.item-menu-arquivo .nova-nota:hover
+{/*Organização estética do link do menu*/
+    background-color: #e7e7e7;
     transition: 0.5s;
-    border-left:3px solid #0d7fdd;
-    /*Organização estética do link do menu*/
 }
+
+/*-----Menu editar-----*/
+
+.menu-editar
+{/*Organização estética do botão*/
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.item-menu-editar
+{
+    display: none;             /*Esconde o menu*/
+    position: absolute;        /*permite se posicionar fora do padrão sobre outros elementos*/
+    background-color: #fff;
+    min-width: 100px;          /*Largura minima de cada item do menu*/
+    z-index: 1;                /*Posiciona-o acima dos outros elementos*/
+    .alterar-titulo
+    {/*Organização estética do link*/
+        display: block;
+        padding: 5px;
+        font-size: 11px;
+        color: black;
+        background-color: #fff;
+        text-decoration: none;
+        transition: 0.5s;
+    }
+}
+
+.guia-menu:hover .item-menu-editar
+{/*Altera o fundo do botão quando o mouse passa sobre o menu*/
+    color: #000;
+    padding: 2px;
+    background-color: #e7e7e7;
+    cursor: pointer;
+}
+
+.guia-menu:hover .item-menu-editar
+{/*O conteúdo oculto do menu é exibido*/
+    display: block;
+}
+
+.item-menu-editar .alterar-titulo:hover
+{/*Organização estética do link do menu*/
+    background-color: #e7e7e7;
+    transition: 0.5s;
+}
+
