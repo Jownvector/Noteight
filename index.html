@@ -4,29 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Note8</title>
+    <title>Note 8</title>
 </head>
 <body>
     <script src="script.js"></script>
 
-    <!--Guia menu-->
+    <!--Inicio da guia menu-->
 
-    <header class="menu-suspenso"> <!--Base da guia menu-->
-        <button class="opc-1-suspenso">Arquivo</button> <!--Botão que irá armazenar as opções do menu susupenso-->
-        <div class="conteudo-opc-1-suspenso"> <!--Base do menu suspenso-->
-            <a href="#">Nova nota</a> <!--Itens do menu suspenso-->
-        </div> <!--Fim da base do menu suspenso-->
-    </header> <!--Fim da base da guia menu-->
+    <!--Guia arquivo-->
+
+    <div class="guia-menu">
+        <button class="menu-arquivo">Arquivo</button>
+        <div class="item-menu-arquivo">
+            <a class="nova-nota">Nova nota</a>
+        </div>
+    </div>
+
+    <!--fim da guia arquivo-->
+
+    <!--Guia editar-->
+
+    <div class="guia-menu">
+        <button class="menu-editar">Editar</button>
+        <div class="item-menu-editar">
+            <a class="alterar-titulo">Alterar titulo</a>
+        </div>
+    </div>
+
+    <!--fim da guia editar-->
 
     <!--Fim da guia menu-->
-
-    <main>
-        <h3 class="titulo-nota">Primeira nota</h3>
-
-        <div class="campo-de-nota">
-            <textarea cols="255" rows="55"></textarea>
-        </div>
-    </main>
 
 </body>
 </html>
