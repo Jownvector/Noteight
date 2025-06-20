@@ -1,8 +1,19 @@
+::selection
+{/*Estética da seleção de texto*/
+    background:#cecece;
+}
+
 body{
     font-family: 'Segoe UI';  /*aplicação de uma fonte global*/
 }
 
 /*-----Menu arquivo-----*/
+
+.painel
+{
+    display: flex;
+    justify-content: center;
+}
 
 .guia-menu
 {
@@ -12,37 +23,55 @@ body{
 
 .menu-arquivo
 {/*Organização estética do botão*/
-    background: none;
-    border: none;
+    background-color: #eeeeee;
+    border: 1px solid #9b9b9b;
     cursor: pointer;
-    padding: 5px;
+    padding: 10px;
+    border-radius: 8px 0px 0px 8px;
+    transition: 0.5s;
+}
+
+.menu-arquivo:hover
+{/*Organização estética da interação com o botão*/
+    background-color: #dbdbdb;
+    border: 1px solid #9b9b9b;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 8px 0px 0px 8px;
+    transition: 0.5s;
+    color:#303030;
 }
 
 .item-menu-arquivo
 {
     display: none;            /*Esconde o menu*/
     position: absolute;       /*permite se posicionar fora do padrão sobre outros elementos*/
-    background-color: #fff;
     min-width: 100px;          /*Largura minima de cada item do menu*/
     z-index: 1;               /*Posiciona-o acima dos outros elementos*/
+    background-color: #eeeeee;
+    border: 1px solid #9b9b9b;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.5s;
     .nova-nota
     {/*Organização estética do link*/
         display: block;
         padding: 5px;
         font-size: 11px;
         color: black;
-        background-color: #fff;
         text-decoration: none;
         transition: 0.5s;
+        cursor: pointer;
+        border-radius: 5px;
     }
 }
 
 .guia-menu:hover .item-menu-arquivo
 {/*Altera o fundo do botão quando o mouse passa sobre o menu*/
-    color: #000;
     padding: 2px;
-    background-color: #e7e7e7;
     cursor: pointer;
+    border-radius: 5px;
+    transition: 0.5s;
 }
 
 .guia-menu:hover .item-menu-arquivo
@@ -52,85 +81,55 @@ body{
 
 .item-menu-arquivo .nova-nota:hover
 {/*Organização estética do link do menu*/
-    background-color: #e7e7e7;
+    background-color: #dbdbdb;
     transition: 0.5s;
-}
-
-/*-----Menu editar-----*/
-
-.menu-editar
-{/*Organização estética do botão*/
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 5px;
-}
-
-.item-menu-editar
-{
-    display: none;             /*Esconde o menu*/
-    position: absolute;        /*permite se posicionar fora do padrão sobre outros elementos*/
-    background-color: #fff;
-    min-width: 100px;          /*Largura minima de cada item do menu*/
-    z-index: 1;                /*Posiciona-o acima dos outros elementos*/
-    .alterar-titulo
-    {/*Organização estética do link*/
-        display: block;
-        padding: 5px;
-        font-size: 11px;
-        color: black;
-        background-color: #fff;
-        text-decoration: none;
-        transition: 0.5s;
-    }
-}
-
-.guia-menu:hover .item-menu-editar
-{/*Altera o fundo do botão quando o mouse passa sobre o menu*/
-    color: #000;
-    padding: 2px;
-    background-color: #e7e7e7;
-    cursor: pointer;
-}
-
-.guia-menu:hover .item-menu-editar
-{/*O conteúdo oculto do menu é exibido*/
-    display: block;
-}
-
-.item-menu-editar .alterar-titulo:hover
-{/*Organização estética do link do menu*/
-    background-color: #e7e7e7;
-    transition: 0.5s;
+    color:#303030;
 }
 
 /*-----Menu tema-----*/
 
 .menu-tema
 {/*Organização estética do botão*/
-    background: none;
-    border: none;
+    background-color: #eeeeee;
+    border: 1px solid #9b9b9b;
     cursor: pointer;
-    padding: 5px;
+    padding: 10px;
+    border-radius: 0px 8px 8px 0px;
+    transition: 0.5s;
+}
+
+.menu-tema:hover
+{/*Organização estética da interação com o*/
+    background-color: #dbdbdb;
+    border: 1px solid #9b9b9b;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 0px 8px 8px 0px;
+    transition: 0.5s;
+    color:#303030;
 }
 
 .item-menu-tema
 {
-    display: none;             /*Esconde o menu*/
-    position: absolute;        /*permite se posicionar fora do padrão sobre outros elementos*/
-    background-color: #fff;
+    display: none;            /*Esconde o menu*/
+    position: absolute;       /*permite se posicionar fora do padrão sobre outros elementos*/
     min-width: 100px;          /*Largura minima de cada item do menu*/
-    z-index: 1;                /*Posiciona-o acima dos outros elementos*/
+    z-index: 1;               /*Posiciona-o acima dos outros elementos*/
+    background-color: #eeeeee;
+    border: 1px solid #9b9b9b;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.5s;
     .tema-claro
     {/*Organização estética do link*/
         display: block;
         padding: 5px;
         font-size: 11px;
         color: black;
-        background-color: none;
         text-decoration: none;
         transition: 0.5s;
-        min-width: 100px;
+        cursor: pointer;
+        border-radius: 5px;
     }
     .tema-escuro
     {/*Organização estética do link*/
@@ -138,31 +137,19 @@ body{
         padding: 5px;
         font-size: 11px;
         color: black;
-        background-color: none;
         text-decoration: none;
         transition: 0.5s;
-        min-width: 100px;
+        cursor: pointer;
+        border-radius: 5px;
     }
-}
-
-.opcao-tema-claro
-{/*Organização e alinhamento da caixa de seleção e o texto indicativo do tema*/
-    display: flex;
-    background-color: #fff;
-}
-
-.opcao-tema-escuro
-{/*Organização e alinhamento da caixa de seleção e o texto indicativo do tema*/
-    display: flex;
-    background-color: #fff;
 }
 
 .guia-menu:hover .item-menu-tema
 {/*Altera o fundo do botão quando o mouse passa sobre o menu*/
-    color: #000;
     padding: 2px;
-    background-color: #e7e7e7;
     cursor: pointer;
+    border-radius: 5px;
+    transition: 0.5s;
 }
 
 .guia-menu:hover .item-menu-tema
@@ -170,12 +157,36 @@ body{
     display: block;
 }
 
-.item-menu-tema .tema-claro:hover
-{/*Organização estética do link do menu*/
-    transition: 0.5s;
+.opcao-tema
+{/*Alinhamento dos itens da guia tema*/
+    display: flex;
+    justify-content: left;
 }
 
-.item-menu-tema .tema-escuro:hover
+.item-menu-tema .opcao-tema:hover
 {/*Organização estética do link do menu*/
+    display: flex;
+    justify-content: left;
+    background-color: #dbdbdb;
     transition: 0.5s;
+    color:#303030;
+    border-radius: 5px;
+}
+
+/*-----Recursos da nota-----*/
+
+.campo-da-nota
+{/*Organização estética do campo de escrita da nota*/
+    font-size: 14px;
+    padding: 5px;
+    background-color: #eeeeee;
+    outline: none;
+    caret-color: #303030;
+    border-radius: 5px;
+}
+
+.titulo-editavel-nota
+{/*Organização estética do campo de escrita da nota*/
+    outline: none;
+    caret-color: #303030;
 }
