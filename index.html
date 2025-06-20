@@ -13,45 +13,46 @@
 
     <!--Guia arquivo-->
 
+    <div class="painel">
     <div class="guia-menu">
         <button class="menu-arquivo">Arquivo</button>
         <div class="item-menu-arquivo">
-            <a class="nova-nota">Nova nota</a>
+            <a class="nova-nota" id="salvar-arquivo-txt" onclick="salvarArquivoTxt()">Salvar nota</a>
         </div>
     </div>
 
     <!--fim da guia arquivo-->
-
-    <!--Guia editar-->
-
-    <div class="guia-menu">
-        <button class="menu-editar">Editar</button>
-        <div class="item-menu-editar">
-            <a class="alterar-titulo">Alterar titulo</a>
-        </div>
-    </div>
-
-    <!--fim da guia editar-->
 
     <!--Guia tema-->
 
     <div class="guia-menu">
         <button class="menu-tema">Tema</button>
         <div class="item-menu-tema">
-                <div class="opcao-tema-claro">
+                <div class="opcao-tema">
                 <input type="checkbox" class="caixa-tema-claro">
                 <a class="tema-claro">Claro</a>
             </div>
-                <div class="opcao-tema-escuro">
+                <div class="opcao-tema">
                 <input type="checkbox" class="caixa-tema-escuro">
                 <a class="tema-escuro">Escuro</a>
             </div>
         </div>
     </div>
+    </div>
 
     <!--fim da guia tema-->
 
     <!--Fim da guia menu-->
+
+    <div class="titulo-nota">
+        <h2 contenteditable="true" class="titulo-editavel-nota" id="titulo-principal">Titulo da nota</h1>
+    </div>
+
+    <!--Campo de escrita da nota-->
+
+    <div class="campo-da-nota" id="conteudo-da-nota" contenteditable="true"></div>
+
+    <!--Fim do campo de escrita da nota-->
 
 </body>
 </html>
