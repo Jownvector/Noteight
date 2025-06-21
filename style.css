@@ -5,6 +5,7 @@
 
 body{
     font-family: 'Segoe UI';  /*aplicação de uma fonte global*/
+    margin: 0;
 }
 
 /*-----Menu arquivo-----*/
@@ -13,6 +14,8 @@ body{
 {
     display: flex;
     justify-content: center;
+    padding: 5px;
+    border-bottom: 1px solid #dadada;
 }
 
 .guia-menu
@@ -23,23 +26,19 @@ body{
 
 .menu-arquivo
 {/*Organização estética do botão*/
-    background-color: #eeeeee;
-    border: 1px solid #9b9b9b;
+    background: none;
+    border: none;
     cursor: pointer;
-    padding: 10px;
-    border-radius: 8px 0px 0px 8px;
+    padding: 5px;
     transition: 0.5s;
 }
 
 .menu-arquivo:hover
 {/*Organização estética da interação com o botão*/
-    background-color: #dbdbdb;
-    border: 1px solid #9b9b9b;
+    background:#dadada;
     cursor: pointer;
-    padding: 10px;
-    border-radius: 8px 0px 0px 8px;
+    padding: 5px;
     transition: 0.5s;
-    color:#303030;
 }
 
 .item-menu-arquivo
@@ -48,21 +47,18 @@ body{
     position: absolute;       /*permite se posicionar fora do padrão sobre outros elementos*/
     min-width: 100px;          /*Largura minima de cada item do menu*/
     z-index: 1;               /*Posiciona-o acima dos outros elementos*/
-    background-color: #eeeeee;
-    border: 1px solid #9b9b9b;
+    border: 1px solid #dadada;
+    background: #fff;
     cursor: pointer;
-    border-radius: 8px;
     transition: 0.5s;
     .nova-nota
     {/*Organização estética do link*/
         display: block;
         padding: 5px;
         font-size: 11px;
-        color: black;
         text-decoration: none;
         transition: 0.5s;
         cursor: pointer;
-        border-radius: 5px;
     }
 }
 
@@ -70,7 +66,6 @@ body{
 {/*Altera o fundo do botão quando o mouse passa sobre o menu*/
     padding: 2px;
     cursor: pointer;
-    border-radius: 5px;
     transition: 0.5s;
 }
 
@@ -81,32 +76,27 @@ body{
 
 .item-menu-arquivo .nova-nota:hover
 {/*Organização estética do link do menu*/
-    background-color: #dbdbdb;
+    background-color: #dadada;
     transition: 0.5s;
-    color:#303030;
 }
 
 /*-----Menu tema-----*/
 
 .menu-tema
 {/*Organização estética do botão*/
-    background-color: #eeeeee;
-    border: 1px solid #9b9b9b;
+    background: none;
+    border: none;
     cursor: pointer;
-    padding: 10px;
-    border-radius: 0px 8px 8px 0px;
+    padding: 5px;
     transition: 0.5s;
 }
 
 .menu-tema:hover
 {/*Organização estética da interação com o*/
-    background-color: #dbdbdb;
-    border: 1px solid #9b9b9b;
+    background:#dadada;
     cursor: pointer;
-    padding: 10px;
-    border-radius: 0px 8px 8px 0px;
+    padding: 5px;
     transition: 0.5s;
-    color:#303030;
 }
 
 .item-menu-tema
@@ -115,32 +105,27 @@ body{
     position: absolute;       /*permite se posicionar fora do padrão sobre outros elementos*/
     min-width: 100px;          /*Largura minima de cada item do menu*/
     z-index: 1;               /*Posiciona-o acima dos outros elementos*/
-    background-color: #eeeeee;
-    border: 1px solid #9b9b9b;
+    border: 1px solid #dadada;
+    background: #fff;
     cursor: pointer;
-    border-radius: 8px;
     transition: 0.5s;
     .tema-claro
     {/*Organização estética do link*/
         display: block;
         padding: 5px;
         font-size: 11px;
-        color: black;
         text-decoration: none;
         transition: 0.5s;
         cursor: pointer;
-        border-radius: 5px;
     }
     .tema-escuro
     {/*Organização estética do link*/
         display: block;
         padding: 5px;
         font-size: 11px;
-        color: black;
         text-decoration: none;
         transition: 0.5s;
         cursor: pointer;
-        border-radius: 5px;
     }
 }
 
@@ -148,7 +133,6 @@ body{
 {/*Altera o fundo do botão quando o mouse passa sobre o menu*/
     padding: 2px;
     cursor: pointer;
-    border-radius: 5px;
     transition: 0.5s;
 }
 
@@ -167,22 +151,34 @@ body{
 {/*Organização estética do link do menu*/
     display: flex;
     justify-content: left;
-    background-color: #dbdbdb;
+    background-color: #dadada;
     transition: 0.5s;
-    color:#303030;
-    border-radius: 5px;
 }
 
 /*-----Recursos da nota-----*/
 
+.titulo-nota
+{
+    margin: 10px;
+    h2
+    {
+        display: inline;
+        background-color:#303030;
+        color: #fff;
+        padding: 2px;
+    }
+}
+
 .campo-da-nota
 {/*Organização estética do campo de escrita da nota*/
     font-size: 14px;
-    padding: 5px;
-    background-color: #eeeeee;
+    background: #eeeeee;
     outline: none;
     caret-color: #303030;
-    border-radius: 5px;
+    border: 1px solid #dadada;
+    margin: 10px;
+    padding: 5px;
+    color: #303030;
 }
 
 .titulo-editavel-nota
