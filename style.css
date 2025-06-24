@@ -1,16 +1,29 @@
+/*__________Customização da seleção de texto__________*/
 ::selection
-{/*Estética da seleção de texto*/
+{
     background:#cecece;
+    color:#181818;
 }
 
+/*__________Configuração basica do corpo do site__________*/
+
 body{
-    font-family: 'Segoe UI';  /*aplicação de uma fonte global*/
+    font-family: 'Segoe UI';
     margin: 0;
 }
 
-/*-----Menu arquivo-----*/
+/*__________Configurações do tema claro__________*/
 
-.painel
+body.tema-claro-principal
+{
+    background-color: #fff;
+    color: #181818;
+    transition: 0.5s;
+}
+
+/*__________Configurações do menu arquivo__________*/
+
+.painel-principal
 {
     display: flex;
     justify-content: center;
@@ -20,12 +33,14 @@ body{
 
 .guia-menu
 {
-    display: inline-block;    /*Faz o container se comportar como um bloco, mas permanecendo na mesma linha com os outros elementos*/
-    position: relative;       /*Permite que os elementos filhos do container principal sejam posicionados em relação a ele*/
+    display: inline-block;
+    position: relative;
 }
 
-.menu-arquivo
-{/*Organização estética do botão*/
+/*__________Interação da guia arquivo__________*/
+
+.guia-arquivo
+{
     background: none;
     border: none;
     cursor: pointer;
@@ -33,57 +48,69 @@ body{
     transition: 0.5s;
 }
 
-.menu-arquivo:hover
-{/*Organização estética da interação com o botão*/
+.guia-arquivo:hover
+{
     background:#dadada;
     cursor: pointer;
     padding: 5px;
     transition: 0.5s;
 }
 
-.item-menu-arquivo
+/*__________Interação dos submenus da guia arquivo__________*/
+
+.submenu-arquivo
 {
-    display: none;            /*Esconde o menu*/
-    position: absolute;       /*permite se posicionar fora do padrão sobre outros elementos*/
-    min-width: 100px;          /*Largura minima de cada item do menu*/
-    z-index: 1;               /*Posiciona-o acima dos outros elementos*/
+    display: none;
+    position: absolute;
+    min-width: 100px;
+    z-index: 1;
     border: 1px solid #dadada;
     background: #fff;
     cursor: pointer;
     transition: 0.5s;
-    .nova-nota
-    {/*Organização estética do link*/
-        display: block;
-        padding: 5px;
-        font-size: 11px;
-        text-decoration: none;
-        transition: 0.5s;
-        cursor: pointer;
-    }
 }
 
-.guia-menu:hover .item-menu-arquivo
-{/*Altera o fundo do botão quando o mouse passa sobre o menu*/
+/*__________Submenu para salvar a nota__________*/
+
+.salvar-nota
+{
+    display: block;
+    padding: 5px;
+    font-size: 11px;
+    text-decoration: none;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+/*__________Interação com o submenu arquivo__________*/
+
+.guia-menu:hover .submenu-arquivo
+{
     padding: 2px;
     cursor: pointer;
     transition: 0.5s;
 }
 
-.guia-menu:hover .item-menu-arquivo
-{/*O conteúdo oculto do menu é exibido*/
+/*__________Exibe os submenus ocultos__________*/
+
+.guia-menu:hover .submenu-arquivo
+{
     display: block;
 }
 
-.item-menu-arquivo .nova-nota:hover
-{/*Organização estética do link do menu*/
+/*__________Altera a cor de fundo do submenu "Salvar nota"__________*/
+
+.submenu-arquivo .salvar-nota:hover
+{
     background-color: #dadada;
-    transition: 0.5s;
 }
 
-/*-----Menu tema-----*/
+/*__________Configurações do menu tema__________*/
 
-.menu-tema
-{/*Organização estética do botão*/
+/*__________Interação da guia tema__________*/
+
+.guia-tema
+{
     background: none;
     border: none;
     cursor: pointer;
@@ -91,86 +118,105 @@ body{
     transition: 0.5s;
 }
 
-.menu-tema:hover
-{/*Organização estética da interação com o*/
+.guia-tema:hover
+{
     background:#dadada;
     cursor: pointer;
     padding: 5px;
     transition: 0.5s;
 }
 
-.item-menu-tema
+/*__________Div pai de todos os temas__________*/
+
+.temas
 {
-    display: none;            /*Esconde o menu*/
-    position: absolute;       /*permite se posicionar fora do padrão sobre outros elementos*/
-    min-width: 100px;          /*Largura minima de cada item do menu*/
-    z-index: 1;               /*Posiciona-o acima dos outros elementos*/
-    border: 1px solid #dadada;
-    background: #fff;
-    cursor: pointer;
-    transition: 0.5s;
-    .tema-claro
-    {/*Organização estética do link*/
-        display: block;
-        padding: 5px;
-        font-size: 11px;
-        text-decoration: none;
-        transition: 0.5s;
-        cursor: pointer;
-    }
-    .tema-escuro
-    {/*Organização estética do link*/
-        display: block;
-        padding: 5px;
-        font-size: 11px;
-        text-decoration: none;
-        transition: 0.5s;
-        cursor: pointer;
-    }
-}
-
-.guia-menu:hover .item-menu-tema
-{/*Altera o fundo do botão quando o mouse passa sobre o menu*/
-    padding: 2px;
-    cursor: pointer;
-    transition: 0.5s;
-}
-
-.guia-menu:hover .item-menu-tema
-{/*O conteúdo oculto do menu é exibido*/
-    display: block;
-}
-
-.opcao-tema
-{/*Alinhamento dos itens da guia tema*/
     display: flex;
     justify-content: left;
 }
 
-.item-menu-tema .opcao-tema:hover
-{/*Organização estética do link do menu*/
+.submenu-tema .temas:hover
+{
     display: flex;
     justify-content: left;
     background-color: #dadada;
     transition: 0.5s;
 }
 
-/*-----Recursos da nota-----*/
+/*__________Div principal que armazena todos os submenus presente na guia temas__________*/
+
+.submenu-tema
+{
+    display: none;
+    position: absolute;
+    min-width: 100px;
+    z-index: 1;
+    border: 1px solid #dadada;
+    background: #fff;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+/*__________Submenu do tema claro__________*/
+
+.tema-claro
+{
+    display: block;
+    padding: 5px;
+    font-size: 11px;
+    text-decoration: none;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+/*__________Submenu do tema escuro__________*/
+
+.tema-escuro
+{
+    display: block;
+    padding: 5px;
+    font-size: 11px;
+    text-decoration: none;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+/*__________Interação com o submenu tema__________*/
+
+
+.guia-menu:hover .submenu-tema
+{
+    padding: 2px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+/*__________Exibe os submenus ocultos__________*/
+
+.guia-menu:hover .submenu-tema
+{
+    display: block;
+}
+
+/*__________Recursos do campo de nota__________*/
 
 .titulo-nota
 {
     margin: 10px;
-    h2
-    {
-        display: inline;
-        background-color:#303030;
-        color: #fff;
-        padding: 2px;
-    }
+}
+
+.titulo-editavel
+{
+    display: inline;
+    background: #eeeeee;
+    color: #181818;
+    padding: 2px;
+    border: 1px solid #dadada;
+    outline: none;
+    caret-color: #303030;
 }
 
 .campo-da-nota
-{/*Organização estética do campo de escrita da nota*/
+{
     font-size: 14px;
     background: #eeeeee;
     outline: none;
@@ -181,8 +227,186 @@ body{
     color: #303030;
 }
 
-.titulo-editavel-nota
-{/*Organização estética do campo de escrita da nota*/
+/*__________Configurações do tema escuro__________*/
+
+/*__________Configurações do tema escuro__________*/
+
+body.tema-escuro-principal {
+    background-color: #303030;
+    color: #fff;
+    transition: 0.5s;
+}
+
+/*__________Interação da guia arquivo__________*/
+
+body.tema-escuro-principal .guia-arquivo {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    transition: 0.5s;
+    color: #fff;
+}
+
+body.tema-escuro-principal .guia-arquivo:hover {
+    background: #303030;
+    cursor: pointer;
+    padding: 5px;
+    transition: 0.5s;
+}
+
+/*__________Interação dos submenus da guia arquivo__________*/
+
+body.tema-escuro-principal .submenu-arquivo {
+    display: none;
+    position: absolute;
+    min-width: 100px;
+    z-index: 1;
+    border: 1px solid #181818;
+    background: #303030;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+/*__________Submenu para salvar a nota__________*/
+
+body.tema-escuro-principal .salvar-nota {
+    display: block;
+    padding: 5px;
+    font-size: 11px;
+    text-decoration: none;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+/*__________Interação com o submenu arquivo__________*/
+
+body.tema-escuro-principal .guia-menu:hover .submenu-arquivo {
+    padding: 2px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+/*__________Exibe os submenus ocultos__________*/
+
+body.tema-escuro-principal .guia-menu:hover .submenu-arquivo {
+    display: block;
+}
+
+/*__________Altera a cor de fundo do submenu "Salvar nota"__________*/
+
+body.tema-escuro-principal .submenu-arquivo .salvar-nota:hover {
+    background-color: #181818;
+}
+
+/*__________Configurações do menu tema__________*/
+
+/*__________Interação da guia tema__________*/
+
+body.tema-escuro-principal .guia-tema {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    transition: 0.5s;
+    color: #fff;
+}
+
+body.tema-escuro-principal .guia-tema:hover {
+    background: #303030;
+    cursor: pointer;
+    padding: 5px;
+    transition: 0.5s;
+}
+
+/*__________Div pai de todos os temas__________*/
+
+body.tema-escuro-principal .temas {
+    display: flex;
+    justify-content: left;
+}
+
+/*__________Interação com as opções de temas__________*/
+
+body.tema-escuro-principal .submenu-tema .temas:hover {
+    display: flex;
+    justify-content: left;
+    background-color: #181818;
+    transition: 0.5s;
+}
+
+/*__________Div principal que armazena todos os submenus presente na guia temas__________*/
+
+body.tema-escuro-principal .submenu-tema {
+    display: none;
+    position: absolute;
+    min-width: 100px;
+    z-index: 1;
+    border: 1px solid #181818;
+    background: #303030;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+/*__________Submenu do tema claro__________*/
+
+body.tema-escuro-principal .tema-claro {
+    display: block;
+    padding: 5px;
+    font-size: 11px;
+    text-decoration: none;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+/*__________Submenu do tema escuro__________*/
+
+body.tema-escuro-principal .tema-escuro {
+    display: block;
+    padding: 5px;
+    font-size: 11px;
+    text-decoration: none;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+/*__________Interação com o submenu tema__________*/
+
+body.tema-escuro-principal .guia-menu:hover .submenu-tema {
+    padding: 2px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+/*__________Exibe os submenus ocultos__________*/
+
+body.tema-escuro-principal .guia-menu:hover .submenu-tema {
+    display: block;
+}
+
+/*__________Recursos do campo de nota__________*/
+
+body.tema-escuro-principal .titulo-nota {
+    margin: 10px;
+}
+
+body.tema-escuro-principal .titulo-editavel {
+    display: inline;
+    background: #5e5e5e;
+    color: #fff;
+    padding: 2px;
+    border: 1px solid #dadada;
     outline: none;
-    caret-color: #303030;
+    caret-color: #ffffff;
+}
+
+body.tema-escuro-principal .campo-da-nota {
+    font-size: 14px;
+    background: #5e5e5e;
+    outline: none;
+    caret-color: #ffffff;
+    border: 1px solid #dadada;
+    margin: 10px;
+    padding: 5px;
+    color: #fff;
 }
