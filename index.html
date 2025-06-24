@@ -7,52 +7,53 @@
     <title>Note 8</title>
 </head>
 <body>
-    <script src="script.js"></script>
+    <header>
+    <!-- Painel de menus -->
+    <div class="painel-principal">
 
-    <!--Inicio da guia menu-->
-
-    <!--Guia arquivo-->
-
-    <div class="painel">
-    <div class="guia-menu">
-        <button class="menu-arquivo">Arquivo</button>
-        <div class="item-menu-arquivo">
-            <a class="nova-nota" id="salvar-arquivo-txt" onclick="salvarArquivoTxt()">Salvar nota</a>
-        </div>
-    </div>
-
-    <!--fim da guia arquivo-->
-
-    <!--Guia tema-->
-
-    <div class="guia-menu">
-        <button class="menu-tema">Tema</button>
-        <div class="item-menu-tema">
-                <div class="opcao-tema">
-                <input type="checkbox" class="caixa-tema-claro">
-                <a class="tema-claro">Claro</a>
-            </div>
-                <div class="opcao-tema">
-                <input type="checkbox" class="caixa-tema-escuro">
-                <a class="tema-escuro">Escuro</a>
+        <nav>
+        <!-- Menu arquivo -->
+        <div class="guia-menu">
+            <button class="guia-arquivo">Arquivo</button> <!-- Botão para mostrar menu arquivo -->
+            <div class="submenu-arquivo">
+                <a class="salvar-nota" id="salvar-arquivo-txt" onclick="salvarArquivoTxt()">Salvar nota</a> <!-- Opção para salvar nota -->
             </div>
         </div>
+        <!-- Fim do menu arquivo -->
+
+        <!-- Menu Tema -->
+        <div class="guia-menu">
+            <button class="guia-tema">Temas</button> <!-- Botão para mostrar menu tema -->
+            <div class="submenu-tema">
+
+                <!-- Opção Tema Claro -->
+                <div class="temas">
+                    <input type="radio" class="radio-tema-claro" id="radio-tema-claro" name="tema" checked> <!-- Input radio tema claro -->
+                    <a class="tema-claro">Claro</a> <!-- Texto do tema -->
+                </div>
+
+                <!-- Opção Tema Escuro -->
+                <div class="temas">
+                    <input type="radio" class="radio-tema-escuro" id="radio-tema-escuro" name="tema"> <!-- Input radio tema escuro -->
+                    <a class="tema-escuro">Escuro</a> <!-- Texto do tema -->
+                </div>
+            </div>
+        </div>
+        <!-- Fim do menu Tema -->
+        </nav>
     </div>
-    </div>
+    </header>
+    <!-- Fim do painel de menus -->
 
-    <!--fim da guia tema-->
-
-    <!--Fim da guia menu-->
-
+    <!-- Campo editável para o título da nota -->
     <div class="titulo-nota">
-        <h2 contenteditable="true" class="titulo-editavel-nota" id="titulo-principal">Titulo da nota</h1>
+        <h2 contenteditable="true" class="titulo-editavel" id="titulo-principal">Titulo da nota</h2>
     </div>
 
-    <!--Campo de escrita da nota-->
+    <!-- Campo editável para o conteúdo da nota -->
+    <div class="campo-da-nota" id="conteudo-da-nota" contenteditable="true">insira a sua anotação aqui...</div>
 
-    <div class="campo-da-nota" id="conteudo-da-nota" contenteditable="true"></div>
-
-    <!--Fim do campo de escrita da nota-->
-
+    <!-- Script JavaScript no final para garantir que o DOM foi carregado -->
+    <script src="script.js"></script>
 </body>
 </html>
