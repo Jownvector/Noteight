@@ -1,49 +1,71 @@
-function salvarArquivoTxt()
-{
-    // Seleciona o elemento que contém o conteúdo que será salvo
+//Função para salvar o conteúdo da nota como um arquivo "".txt"
+function salvarArquivoTxt() {
+     // Pega o elemento da nota
     const elementoConteudo = document.getElementById('conteudo-da-nota');
 
-    // Pega o texto puro dentro do elemento, ignorando tags HTML
+     // Extrai o texto puro
     const conteudoDoArquivo = elementoConteudo.innerText;
 
-    // Cria um "blob" (objeto binário) com o conteúdo do texto e tipo 'text/plain'
+    // Cria um Blob com o texto
     const arquivamentoTxt = new Blob([conteudoDoArquivo], { type: 'text/plain' });
 
-    // Gera uma URL temporária que representa o blob (arquivo) na memória
+    // Cria URL temporária para o arquivo
     const urlBlob = URL.createObjectURL(arquivamentoTxt);
 
-    // Cria um elemento <a> (link) dinamicamente para simular o clique de download
+    // Cria um link
     const linkTxt = document.createElement('a');
 
-    // Define o link do arquivo gerado para download
+    // Define a URL para download
     linkTxt.href = urlBlob;
 
-    // Pega o título do arquivo a partir de outro elemento (por exemplo, um <h1>)
+    // Pega o título da nota
     const titulo = document.getElementById('titulo-principal').innerText.trim();
 
-    // Define o nome do arquivo (usa o título se existir, senão usa um nome padrão)
+    // Define nome do arquivo
     linkTxt.download = titulo !== '' ? `${titulo}.txt` : 'arquivo.txt';
 
-    // Adiciona temporariamente o link no corpo da página (necessário para funcionar em alguns navegadores)
+    // Adiciona o link ao DOM
     document.body.appendChild(linkTxt);
 
-    // Simula um clique no link para iniciar o download
+    // Simula o clique para download
     linkTxt.click();
 
-    // Remove o link do DOM após o clique, para manter a página limpa
+    // Remove o link
     document.body.removeChild(linkTxt);
 
-    // Libera a URL temporária criada anteriormente para evitar vazamento de memória
+    // Libera a URL temporária
     URL.revokeObjectURL(urlBlob);
 }
 
+//Função para alternar entre tema claro e escuro
+function alterarTema() {
+    // Pega input do tema claro
+    const temaClaro = document.getElementById('radio-tema-claro');
 
-function editarNota()
-{
+    // Pega input do tema escuro
+    const temaEscuro = document.getElementById('radio-tema-escuro');
 
+    if (temaClaro.checked) {
+        // Aplica classe de tema claro
+        document.body.classList.add('tema-claro-principal');
+
+        // Remove classe de tema escuro
+        document.body.classList.remove('tema-escuro-principal');
+
+    } else if (temaEscuro.checked) {
+        // Aplica classe de tema escuro
+        document.body.classList.add('tema-escuro-principal');
+
+        // Remove classe de tema claro
+        document.body.classList.remove('tema-claro-principal');
+    }
 }
 
-function alterarTema()
-{
+// Aguarda o carregamento do DOM para adicionar eventos
+window.addEventListener('DOMContentLoaded', () => {
+    // Evento para tema claro
+    document.getElementById('radio-tema-claro').addEventListener('change', alterarTema);
 
-}
+    // Evento para tema escuro
+    document.getElementById('radio-tema-escuro').addEventListener('change', alterarTema);
+});
