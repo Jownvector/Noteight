@@ -69,3 +69,15 @@ window.addEventListener('DOMContentLoaded', () => {
     // Evento para tema escuro
     document.getElementById('radio-tema-escuro').addEventListener('change', alterarTema);
 });
+
+// Aviso sobre o salvamento das anotações
+window.addEventListener("beforeunload", function (event) {
+  // Define a mensagem de aviso
+  const message = "Você tem alterações não salvas. Tem certeza de que deseja sair?";
+  
+  // Linha de compatibilidade para os navegadores
+  event.preventDefault();
+
+  // Retorna a mensagem customizada
+  return message;
+});
