@@ -70,6 +70,26 @@ body.tema-claro-principal
     transition: 0.5s;
 }
 
+/*__________Icone do submenu salvar nota__________*/
+
+.campo-icone-salvar-nota
+{
+    display: flex;
+    justify-content: left;
+    transition: 0.5s;
+}
+
+.campo-icone-salvar-nota:hover
+{
+    background-color: #dadada;
+    transition: 0.5s;
+}
+
+.icone-salvar-nota
+{
+    padding: 2px;
+}
+
 /*__________Submenu para salvar a nota__________*/
 
 .salvar-nota
@@ -96,13 +116,6 @@ body.tema-claro-principal
 .guia-menu:hover .submenu-arquivo
 {
     display: block;
-}
-
-/*__________Altera a cor de fundo do submenu "Salvar nota"__________*/
-
-.submenu-arquivo .salvar-nota:hover
-{
-    background-color: #dadada;
 }
 
 /*__________Configurações do menu tema__________*/
@@ -150,13 +163,30 @@ body.tema-claro-principal
     position: absolute;
     min-width: 100px;
     z-index: 1;
-    border: 1px solid #dadada;
     background: #fff;
+    border: 1px solid #dadada;
     cursor: pointer;
     transition: 0.5s;
 }
 
-/*__________Submenu do tema claro__________*/
+/*__________Icone/submenu do tema claro__________*/
+
+.campo-icone-tema-claro
+{
+    display: flex;
+    justify-content: left;
+    transition: 0.5s;
+}
+
+.campo-icone-tema-claro:hover
+{
+    transition: 0.5s;
+}
+
+.icone-tema-claro
+{
+    padding: 2px;
+}
 
 .tema-claro
 {
@@ -166,9 +196,28 @@ body.tema-claro-principal
     text-decoration: none;
     transition: 0.5s;
     cursor: pointer;
+    margin-top: 3px;
+
 }
 
-/*__________Submenu do tema escuro__________*/
+/*__________Icone/submenu do tema escuro__________*/
+
+.campo-icone-tema-escuro
+{
+    display: flex;
+    justify-content: left;
+    transition: 0.5s;
+}
+
+.campo-icone-tema-escuro:hover
+{
+    transition: 0.5s;
+}
+
+.icone-tema-escuro
+{
+    padding: 3px;
+}
 
 .tema-escuro
 {
@@ -178,6 +227,7 @@ body.tema-claro-principal
     text-decoration: none;
     transition: 0.5s;
     cursor: pointer;
+    margin-top: 3px;
 }
 
 /*__________Interação com o submenu tema__________*/
@@ -297,6 +347,27 @@ body.tema-escuro-principal .submenu-arquivo {
     transition: 0.5s;
 }
 
+/*__________Icone do submenu salvar nota__________*/
+
+body.tema-escuro-principal .campo-icone-salvar-nota
+{
+    display: flex;
+    transition: 0.5s;
+    justify-content: left;
+}
+
+body.tema-escuro-principal .campo-icone-salvar-nota:hover
+{
+    background-color: #181818;
+    transition: 0.5s;
+}
+
+body.tema-escuro-principal .icone-salvar-nota
+{
+    padding: 2px;
+    filter: invert();
+}
+
 /*__________Submenu para salvar a nota__________*/
 
 body.tema-escuro-principal .salvar-nota {
@@ -322,12 +393,6 @@ body.tema-escuro-principal .guia-menu:hover .submenu-arquivo {
     display: block;
 }
 
-/*__________Altera a cor de fundo do submenu "Salvar nota"__________*/
-
-body.tema-escuro-principal .submenu-arquivo .salvar-nota:hover {
-    background-color: #181818;
-}
-
 /*__________Configurações do menu tema__________*/
 
 /*__________Interação da guia tema__________*/
@@ -342,7 +407,6 @@ body.tema-escuro-principal .guia-tema {
 }
 
 body.tema-escuro-principal .guia-tema:hover {
-    background: #303030;
     cursor: pointer;
     padding: 5px;
     transition: 0.5s;
@@ -355,12 +419,80 @@ body.tema-escuro-principal .temas {
     justify-content: left;
 }
 
+body.tema-escuro-principal .temas:hover {
+    display: flex;
+    justify-content: left;
+    background: #181818;
+}
+
+/*__________Icone/submenu do tema claro__________*/
+
+body.tema-escuro-principal .campo-icone-tema-claro
+{
+    display: flex;
+    justify-content: left;
+    transition: 0.5s;
+}
+
+body.tema-escuro-principal .campo-icone-tema-claro:hover
+{
+    transition: 0.5s;
+}
+
+body.tema-escuro-principal .icone-tema-claro
+{
+    padding: 2px;
+    filter: invert();
+}
+
+body.tema-escuro-principal .tema-claro
+{
+    display: block;
+    padding: 5px;
+    font-size: 11px;
+    text-decoration: none;
+    transition: 0.5s;
+    cursor: pointer;
+    margin-top: 3px;
+
+}
+
+/*__________Icone/submenu do tema escuro__________*/
+
+body.tema-escuro-principal .campo-icone-tema-escuro
+{
+    display: flex;
+    justify-content: left;
+    transition: 0.5s;
+}
+
+body.tema-escuro-principal .campo-icone-tema-escuro:hover
+{
+    transition: 0.5s;
+}
+
+body.tema-escuro-principal .icone-tema-escuro
+{
+    padding: 3px;
+    filter: invert();
+}
+
+body.tema-escuro-principal .tema-escuro
+{
+    display: block;
+    padding: 5px;
+    font-size: 11px;
+    text-decoration: none;
+    transition: 0.5s;
+    cursor: pointer;
+    margin-top: 3px;
+}
+
 /*__________Interação com as opções de temas__________*/
 
 body.tema-escuro-principal .submenu-tema .temas:hover {
     display: flex;
     justify-content: left;
-    background-color: #181818;
     transition: 0.5s;
 }
 
