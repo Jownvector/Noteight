@@ -87,7 +87,7 @@ body.tema-claro-principal
 
 .icone-salvar-nota
 {
-    padding: 2px;
+    padding: 3px;
 }
 
 /*__________Submenu para salvar a nota__________*/
@@ -185,7 +185,7 @@ body.tema-claro-principal
 
 .icone-tema-claro
 {
-    padding: 2px;
+    padding: 5px;
 }
 
 .tema-claro
@@ -216,7 +216,7 @@ body.tema-claro-principal
 
 .icone-tema-escuro
 {
-    padding: 3px;
+    padding: 5px;
 }
 
 .tema-escuro
@@ -441,7 +441,7 @@ body.tema-escuro-principal .campo-icone-tema-claro:hover
 
 body.tema-escuro-principal .icone-tema-claro
 {
-    padding: 2px;
+    padding: 5px;
     filter: invert();
 }
 
@@ -473,7 +473,7 @@ body.tema-escuro-principal .campo-icone-tema-escuro:hover
 
 body.tema-escuro-principal .icone-tema-escuro
 {
-    padding: 3px;
+    padding: 5px;
     filter: invert();
 }
 
