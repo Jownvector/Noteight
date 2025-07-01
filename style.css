@@ -68,6 +68,7 @@ body.tema-claro-principal
     background: #fff;
     cursor: pointer;
     transition: 0.5s;
+    box-shadow: 0 4px 8px 0 #dadada;
 }
 
 /*__________Icone do submenu salvar nota__________*/
@@ -167,6 +168,8 @@ body.tema-claro-principal
     border: 1px solid #dadada;
     cursor: pointer;
     transition: 0.5s;
+    box-shadow: 0 4px 8px 0 #dadada;
+
 }
 
 /*__________Icone/submenu do tema claro__________*/
@@ -345,6 +348,7 @@ body.tema-escuro-principal .submenu-arquivo {
     background: #303030;
     cursor: pointer;
     transition: 0.5s;
+    box-shadow: 0 4px 8px 0 #181818;
 }
 
 /*__________Icone do submenu salvar nota__________*/
@@ -454,7 +458,6 @@ body.tema-escuro-principal .tema-claro
     transition: 0.5s;
     cursor: pointer;
     margin-top: 3px;
-
 }
 
 /*__________Icone/submenu do tema escuro__________*/
@@ -507,6 +510,7 @@ body.tema-escuro-principal .submenu-tema {
     background: #303030;
     cursor: pointer;
     transition: 0.5s;
+    box-shadow: 0 4px 8px 0 #181818;
 }
 
 /*__________Submenu do tema claro__________*/
